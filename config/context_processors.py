@@ -1,0 +1,5 @@
+def objects(request):
+    
+    return{
+        
+    }

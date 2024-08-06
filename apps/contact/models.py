@@ -12,4 +12,4 @@ class Contact(BaseModel):
     message = RichTextField(null=True, blank=True)
 
     def __str__(self) -> str:
-        return self.name
+        return f"{self.name}"

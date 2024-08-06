@@ -7,7 +7,7 @@ from apps.common.models import SubEmail
 def about(request):
     url = request.META.get('HTTP_REFERER')
 
-    user = User.objects.get(id=1)
+    user = User.objects.filter(id=1, is_active=True).first()
 
     if request.method == "POST":
         email = request.POST.get("subemail")

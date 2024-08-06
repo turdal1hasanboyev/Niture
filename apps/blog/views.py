@@ -7,7 +7,7 @@ from apps.blog.models import Blog
 def blog(request):
     url = request.META.get('HTTP_REFERER')
 
-    blogs = Blog.objects.all().order_by("id")[:4]
+    blogs = Blog.objects.filter(is_active=True).order_by("id")[:4]
 
     if request.method == "POST":
         email = request.POST.get("subemail")

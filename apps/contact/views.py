@@ -31,5 +31,5 @@ def contact(request):
 
         return redirect(url)
 
-    return render(request, 'blog.html')
+    return render(request, 'contact.html')
     
